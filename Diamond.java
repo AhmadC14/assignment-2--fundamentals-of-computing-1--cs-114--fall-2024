@@ -52,6 +52,12 @@ public class Diamond {
     public static void drawEvenDiamond(int input) {
         int middle = input / 2; // calculates middle point of shape
 
+        // Prints the single top "*"
+        for (int row = 1; row < middle; row++) {
+            System.out.print("  ");
+        }
+        System.out.println(" * "); // Single "*" at the top
+        
         // top half of shape
         for (int row = 1; row <= middle; row++) {
             // prints spaces to center "*" symbols
@@ -59,7 +65,7 @@ public class Diamond {
                 System.out.print("  ");
             }
             // prints "*" symbols with spaces between each
-            for (int column = 0; column < row; column++) {
+            for (int column = 0; column < row * 2; column++) {
                 System.out.print("* ");
             }
             System.out.println(); // for a new line after each row 
@@ -72,10 +78,17 @@ public class Diamond {
                 System.out.print("  ");
             }
             // prints "*" symbols with spaces between each
-            for (int column = 0; column < row; column++) {
+            for (int column = 0; column < row * 2; column++) {
                 System.out.print("* ");
             }
             System.out.println(); // for a new line after each row 
         }
+
+        // Prints the single bottom "*"
+        for (int row = 1; row < middle; row++) {
+            System.out.print("  ");
+        }
+        System.out.println(" * "); // Single "*" at the top
+                
     }
 }
