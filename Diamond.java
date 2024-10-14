@@ -21,7 +21,7 @@ public class Diamond {
     public static void drawOddDiamond(int input) {
         int middle = input / 2; // calculates middle point of shape
         
-        // top half of shape (including the middle row)
+        // top half of shape
         for (int row = 0; row <= middle; row++) {
             // prints spaces to center "*" symbols
             for (int column = 0; column < middle - row; column++) {
